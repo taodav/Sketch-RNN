@@ -1,6 +1,7 @@
 import torch
 import shutil
 from argparse import ArgumentParser
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 def save_checkpoint(state, is_best, filename='./checkpoints/model_checkpoint.pth.tar'):
